@@ -1,0 +1,2358 @@
+[
+  {
+    "id": "T01",
+    "kind": "task",
+    "title": "Confirm scope, owners and availability",
+    "description": "Supervisor + all: confirm scope, dates, capacity, primary/backup and business priorities; baseline the four repositories",
+    "owner": "Supervisor",
+    "backup": "A. KHMIRI",
+    "day": 1,
+    "status": "Not started",
+    "priority": "P0",
+    "stream": "Coordination",
+    "checks": [
+      {
+        "label": "Confirm the start date and actual departure time",
+        "done": false
+      },
+      {
+        "label": "Agree primary and backup ownership",
+        "done": false
+      },
+      {
+        "label": "Reserve workshop and hands-on time",
+        "done": false
+      },
+      {
+        "label": "Rank critical flows with business owners",
+        "done": false
+      }
+    ],
+    "acceptance": "Signed scope and owner matrix; tracked task list; ranked critical flow list; shared location for the handoff pack",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T02",
+    "kind": "task",
+    "title": "Verify access and team continuity",
+    "description": "A. KHMIRI: verify successor access to GCP, Git, Azure pipelines/state, monitoring, private artifacts and support contacts",
+    "owner": "A. KHMIRI",
+    "backup": "B. DJEMEL",
+    "day": 2,
+    "status": "Not started",
+    "priority": "P0",
+    "stream": "Infrastructure",
+    "checks": [
+      {
+        "label": "Primary and backup test individual access",
+        "done": false
+      },
+      {
+        "label": "Verify deployment and private-artifact access",
+        "done": false
+      },
+      {
+        "label": "Name machine-credential custodians",
+        "done": false
+      }
+    ],
+    "acceptance": "Both successors use their own identities; access matrix records capability tested, approver and any gaps",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T03",
+    "kind": "task",
+    "title": "Map the platform and critical interfaces",
+    "description": "Both successors: trace source \u2192 ingestion \u2192 Dataform \u2192 consumer; inspect live configuration and operating history",
+    "owner": "A. KHMIRI",
+    "backup": "B. DJEMEL",
+    "day": 3,
+    "status": "Not started",
+    "priority": "P0",
+    "stream": "Coordination",
+    "checks": [
+      {
+        "label": "Record deployed revisions and actual schedules",
+        "done": false
+      },
+      {
+        "label": "Identify producer and consumer contacts",
+        "done": false
+      },
+      {
+        "label": "Agree freshness and recovery expectations",
+        "done": false
+      }
+    ],
+    "acceptance": "Environment/schedule inventory, deployed revision IDs, interface register and agreed freshness/recovery expectations",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T04",
+    "kind": "task",
+    "title": "Walk through ATOM infrastructure",
+    "description": "A. KHMIRI + departing engineer: explain ATOM modules, state/workspaces, deployment path and private dependencies; separately review unfinished INFRA",
+    "owner": "A. KHMIRI",
+    "backup": "B. DJEMEL",
+    "day": 4,
+    "status": "Not started",
+    "priority": "P1",
+    "stream": "Infrastructure",
+    "checks": [
+      {
+        "label": "Document state, workspace and approval route",
+        "done": false
+      },
+      {
+        "label": "Review a safe infrastructure plan",
+        "done": false
+      },
+      {
+        "label": "Store unfinished INFRA code in a team-owned location",
+        "done": false
+      }
+    ],
+    "acceptance": "Infrastructure operating guide; state location/ownership; INFRA status and backlog; safe baseline plan review",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T05",
+    "kind": "task",
+    "title": "Trace customer and sales data",
+    "description": "B. DJEMEL + departing engineer: trace one sales and one customer path; compile using verified environment settings",
+    "owner": "B. DJEMEL",
+    "backup": "A. KHMIRI",
+    "day": 5,
+    "status": "Not started",
+    "priority": "P1",
+    "stream": "Dataform",
+    "checks": [
+      {
+        "label": "Compile with verified environment settings",
+        "done": false
+      },
+      {
+        "label": "Trace one customer and one sales path",
+        "done": false
+      },
+      {
+        "label": "Save the dependency graph and setup guide",
+        "done": false
+      }
+    ],
+    "acceptance": "Dataform setup guide, compiled dependency graph and critical-table inventory. Gate 1: access and discovery complete",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T06",
+    "kind": "task",
+    "title": "Diagnose ingestion and rehearse a replay",
+    "description": "A. KHMIRI leads: paired ingestion diagnosis, malformed-file exercise and controlled replay",
+    "owner": "A. KHMIRI",
+    "backup": "B. DJEMEL",
+    "day": 6,
+    "status": "Not started",
+    "priority": "P1",
+    "stream": "Infrastructure",
+    "checks": [
+      {
+        "label": "Trace a failed object to its load job",
+        "done": false
+      },
+      {
+        "label": "Test malformed input in an isolated environment",
+        "done": false
+      },
+      {
+        "label": "Replay one bounded batch and reconcile results",
+        "done": false
+      }
+    ],
+    "acceptance": "Ingestion runbook; job/object IDs; evidence of correct target and expected row counts",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T07",
+    "kind": "task",
+    "title": "Understand datalake and incremental state",
+    "description": "B. DJEMEL leads: initialization/datalake history, schema evolution and late/repeated inputs",
+    "owner": "B. DJEMEL",
+    "backup": "A. KHMIRI",
+    "day": 7,
+    "status": "Not started",
+    "priority": "P1",
+    "stream": "Dataform",
+    "checks": [
+      {
+        "label": "Record keys, fingerprints and watermarks",
+        "done": false
+      },
+      {
+        "label": "Test repeat-run and late-input behavior",
+        "done": false
+      },
+      {
+        "label": "Document isolated restore and rerun steps",
+        "done": false
+      }
+    ],
+    "acceptance": "Incremental-state catalogue and before/after checks; replay behavior documented per action",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T08",
+    "kind": "task",
+    "title": "Rehearse deduplication and mapping recovery",
+    "description": "B. DJEMEL leads; A. KHMIRI repeats: deduplication and master-record walkthrough",
+    "owner": "B. DJEMEL",
+    "backup": "A. KHMIRI",
+    "day": 8,
+    "status": "Not started",
+    "priority": "P0",
+    "stream": "Dataform",
+    "checks": [
+      {
+        "label": "Review synthetic matching and non-matching fixtures",
+        "done": false
+      },
+      {
+        "label": "Check master IDs, consent and deletion propagation",
+        "done": false
+      },
+      {
+        "label": "Recover a baseline customer mapping",
+        "done": false
+      }
+    ],
+    "acceptance": "Approved synthetic fixtures; expected master IDs; consent/deletion handling; mapping restore exercise",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T09",
+    "kind": "task",
+    "title": "Document manual actions after changes",
+    "description": "B. DJEMEL leads: manual actions after schema, fingerprint and business-rule changes",
+    "owner": "B. DJEMEL",
+    "backup": "A. KHMIRI",
+    "day": 9,
+    "status": "Not started",
+    "priority": "P1",
+    "stream": "Dataform",
+    "checks": [
+      {
+        "label": "Test a schema or fingerprint change",
+        "done": false
+      },
+      {
+        "label": "Record execution order and rollback steps",
+        "done": false
+      },
+      {
+        "label": "Validate downstream state and sharing impact",
+        "done": false
+      }
+    ],
+    "acceptance": "Change checklist covering dependent tables, fingerprints, snapshots, mappings and exports; tested isolated example",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T10",
+    "kind": "task",
+    "title": "Verify sharing contracts and monitoring",
+    "description": "Both successors + interface owners: sharing contracts, delivery acknowledgements and monitoring",
+    "owner": "B. DJEMEL",
+    "backup": "A. KHMIRI",
+    "day": 10,
+    "status": "Not started",
+    "priority": "P1",
+    "stream": "Coordination",
+    "checks": [
+      {
+        "label": "Complete critical interface cards",
+        "done": false
+      },
+      {
+        "label": "Confirm consumer receipt and retry rules",
+        "done": false
+      },
+      {
+        "label": "Test alert delivery and missing-input detection",
+        "done": false
+      }
+    ],
+    "acceptance": "Each critical interface has a named owner and retry rule. Gate 2: paired operation and runbooks demonstrated",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T11",
+    "kind": "task",
+    "title": "Lead an infrastructure change",
+    "description": "A. KHMIRI operates, departing engineer observes: low-risk infrastructure change through normal review, preferably in dev",
+    "owner": "A. KHMIRI",
+    "backup": "B. DJEMEL",
+    "day": 11,
+    "status": "Not started",
+    "priority": "P1",
+    "stream": "Infrastructure",
+    "checks": [
+      {
+        "label": "Review a low-risk dev infrastructure change",
+        "done": false
+      },
+      {
+        "label": "Use the normal approval and deployment route",
+        "done": false
+      },
+      {
+        "label": "Validate and demonstrate recovery",
+        "done": false
+      }
+    ],
+    "acceptance": "Reproducible plan, approval trail, deployment validation and rollback/revert evidence",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T12",
+    "kind": "task",
+    "title": "Lead a Dataform change",
+    "description": "B. DJEMEL operates, departing engineer observes: small Dataform change with impact analysis",
+    "owner": "B. DJEMEL",
+    "backup": "A. KHMIRI",
+    "day": 12,
+    "status": "Not started",
+    "priority": "P1",
+    "stream": "Dataform",
+    "checks": [
+      {
+        "label": "Review compiled actions and dependencies",
+        "done": false
+      },
+      {
+        "label": "Run isolated regression checks",
+        "done": false
+      },
+      {
+        "label": "Demonstrate return to baseline",
+        "done": false
+      }
+    ],
+    "acceptance": "Reviewed compiled actions, regression checks, isolated execution and tested return to baseline",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T13",
+    "kind": "task",
+    "title": "Run the failed-pipeline recovery drill",
+    "description": "Both successors: failed ingestion and partial Dataform execution drill; backup takes lead",
+    "owner": "A. KHMIRI",
+    "backup": "B. DJEMEL",
+    "day": 13,
+    "status": "Not started",
+    "priority": "P0",
+    "stream": "Coordination",
+    "checks": [
+      {
+        "label": "Capture failed batch and invocation IDs",
+        "done": false
+      },
+      {
+        "label": "Let the backup diagnose and recover",
+        "done": false
+      },
+      {
+        "label": "Reconcile rows, keys and downstream disposition",
+        "done": false
+      }
+    ],
+    "acceptance": "Timed diagnosis, bounded recovery, row/key reconciliation and no unapproved downstream replay",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T14",
+    "kind": "task",
+    "title": "Rehearse export retry and customer deletion",
+    "description": "Both successors: export retry/duplicate-delivery scenario plus customer deletion scenario",
+    "owner": "B. DJEMEL",
+    "backup": "A. KHMIRI",
+    "day": 14,
+    "status": "Not started",
+    "priority": "P1",
+    "stream": "Dataform",
+    "checks": [
+      {
+        "label": "Reconcile partial or duplicate delivery",
+        "done": false
+      },
+      {
+        "label": "Test deletion with synthetic customer records",
+        "done": false
+      },
+      {
+        "label": "Retain request and consumer evidence",
+        "done": false
+      }
+    ],
+    "acceptance": "Delivery ledger and consumer reconciliation; synthetic deletion result; retention of request evidence without exposing PII",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T15",
+    "kind": "task",
+    "title": "Prove backup-led recovery",
+    "description": "Backup-led restore and release rollback rehearsal; supervisor reviews outstanding gaps",
+    "owner": "A. KHMIRI",
+    "backup": "B. DJEMEL",
+    "day": 15,
+    "status": "Not started",
+    "priority": "P0",
+    "stream": "Coordination",
+    "checks": [
+      {
+        "label": "Backup follows the restore runbook independently",
+        "done": false
+      },
+      {
+        "label": "Distinguish code rollback from data recovery",
+        "done": false
+      },
+      {
+        "label": "Measure recovery against agreed targets",
+        "done": false
+      }
+    ],
+    "acceptance": "Evidence distinguishes code rollback from data/state recovery. Gate 3: successors can operate and recover",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T16",
+    "kind": "task",
+    "title": "Begin independent daily operations",
+    "description": "Successors begin independent BAU ownership; departing engineer observes only",
+    "owner": "B. DJEMEL",
+    "backup": "A. KHMIRI",
+    "day": 16,
+    "status": "Not started",
+    "priority": "P1",
+    "stream": "Coordination",
+    "checks": [
+      {
+        "label": "Record source arrivals, jobs and quality checks",
+        "done": false
+      },
+      {
+        "label": "Confirm critical export receipts",
+        "done": false
+      },
+      {
+        "label": "Operate without prompts from departing engineer",
+        "done": false
+      }
+    ],
+    "acceptance": "First daily operating log, alert triage and documented decisions without prompts",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T17",
+    "kind": "task",
+    "title": "Let the backup lead an incident",
+    "description": "Continue independent BAU; backup handles an issue or isolated drill",
+    "owner": "A. KHMIRI",
+    "backup": "B. DJEMEL",
+    "day": 17,
+    "status": "Not started",
+    "priority": "P1",
+    "stream": "Coordination",
+    "checks": [
+      {
+        "label": "Backup handles an issue or isolated drill",
+        "done": false
+      },
+      {
+        "label": "Follow the written escalation route",
+        "done": false
+      },
+      {
+        "label": "Record recovery evidence",
+        "done": false
+      }
+    ],
+    "acceptance": "Backup competence evidence; response follows the written runbook",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T18",
+    "kind": "task",
+    "title": "Complete three independent operating days",
+    "description": "Complete third consecutive observed operating day; business owners review outputs",
+    "owner": "B. DJEMEL",
+    "backup": "A. KHMIRI",
+    "day": 18,
+    "status": "Not started",
+    "priority": "P1",
+    "stream": "Coordination",
+    "checks": [
+      {
+        "label": "Complete three consecutive critical daily cycles",
+        "done": false
+      },
+      {
+        "label": "Rehearse less-frequent jobs separately",
+        "done": false
+      },
+      {
+        "label": "Obtain business review of outputs",
+        "done": false
+      }
+    ],
+    "acceptance": "Three successful critical cycles/days where daily; rehearsal for less-frequent jobs; draft acceptance",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T19",
+    "kind": "task",
+    "title": "Close gaps and prepare final acceptance",
+    "description": "Resolve failed checks and repeat only affected exercises; archive knowledge in team-owned locations",
+    "owner": "Supervisor",
+    "backup": "A. KHMIRI",
+    "day": 19,
+    "status": "Not started",
+    "priority": "P1",
+    "stream": "Coordination",
+    "checks": [
+      {
+        "label": "Close critical access and recovery gaps",
+        "done": false
+      },
+      {
+        "label": "Assign residual-risk owners, dates and workarounds",
+        "done": false
+      },
+      {
+        "label": "Verify shared documentation and machine continuity",
+        "done": false
+      }
+    ],
+    "acceptance": "No critical access/recovery gaps; remaining backlog has owners, dates and workarounds",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "T20",
+    "kind": "task",
+    "title": "Sign off ownership and departure",
+    "description": "Supervisor chairs final acceptance; identity owner executes the agreed departure procedure at the actual departure time",
+    "owner": "Supervisor",
+    "backup": "A. KHMIRI",
+    "day": 20,
+    "status": "Not started",
+    "priority": "P0",
+    "stream": "Coordination",
+    "checks": [
+      {
+        "label": "Complete final acceptance checklist",
+        "done": false
+      },
+      {
+        "label": "Record supervisor decision and support ownership",
+        "done": false
+      },
+      {
+        "label": "Schedule access revocation for actual departure time",
+        "done": false
+      }
+    ],
+    "acceptance": "Signed acceptance or explicit residual-risk decision; final owner/contact list; transfer/revocation checklist",
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "G1",
+    "kind": "gate",
+    "title": "Access & discovery",
+    "description": "Both successors can reach tools with their own identities; actual schedules, state and critical owners are documented.",
+    "owner": "Supervisor",
+    "day": 5,
+    "status": "Not reviewed",
+    "stream": "Coordination",
+    "priority": "P0",
+    "checks": [
+      {
+        "label": "Successor access demonstrated",
+        "done": false
+      },
+      {
+        "label": "Live schedules and state ownership recorded",
+        "done": false
+      },
+      {
+        "label": "Critical flow and consumer owners confirmed",
+        "done": false
+      }
+    ],
+    "notes": "",
+    "evidence": "",
+    "reviewer": "",
+    "seeded": true
+  },
+  {
+    "id": "G2",
+    "kind": "gate",
+    "title": "Paired operation",
+    "description": "Every topic in the draft has a written procedure and paired example.",
+    "owner": "Supervisor",
+    "day": 10,
+    "status": "Not reviewed",
+    "stream": "Coordination",
+    "priority": "P0",
+    "checks": [
+      {
+        "label": "Runbooks cover all draft topics",
+        "done": false
+      },
+      {
+        "label": "Contracts and incremental state documented",
+        "done": false
+      },
+      {
+        "label": "Paired exercises have reviewable evidence",
+        "done": false
+      }
+    ],
+    "notes": "",
+    "evidence": "",
+    "reviewer": "",
+    "seeded": true
+  },
+  {
+    "id": "G3",
+    "kind": "gate",
+    "title": "Independent recovery",
+    "description": "Successors perform reviewed changes and recovery; the backup can lead an incident.",
+    "owner": "Supervisor",
+    "day": 15,
+    "status": "Not reviewed",
+    "stream": "Coordination",
+    "priority": "P0",
+    "checks": [
+      {
+        "label": "Infrastructure and Dataform changes demonstrated",
+        "done": false
+      },
+      {
+        "label": "Backup-led restore and incident completed",
+        "done": false
+      },
+      {
+        "label": "Data reconciliation and consumer checks pass",
+        "done": false
+      }
+    ],
+    "notes": "",
+    "evidence": "",
+    "reviewer": "",
+    "seeded": true
+  },
+  {
+    "id": "G4",
+    "kind": "gate",
+    "title": "Ownership accepted",
+    "description": "Critical operations are independently supported and the departure transition is ready.",
+    "owner": "Supervisor",
+    "day": 20,
+    "status": "Not reviewed",
+    "stream": "Coordination",
+    "priority": "P0",
+    "checks": [
+      {
+        "label": "Three independent operating days recorded",
+        "done": false
+      },
+      {
+        "label": "All final acceptance criteria verified",
+        "done": false
+      },
+      {
+        "label": "No open P0; other residuals explicitly accepted",
+        "done": false
+      },
+      {
+        "label": "Support and departure revocation have named owners",
+        "done": false
+      }
+    ],
+    "notes": "",
+    "evidence": "",
+    "reviewer": "",
+    "seeded": true
+  },
+  {
+    "id": "R01",
+    "kind": "risk",
+    "title": "Production orchestration is unverified",
+    "description": "Actual schedules, tags, release configurations and manual steps need live verification. Sample modules do not establish deployed wiring.",
+    "owner": "Both successors",
+    "priority": "P0",
+    "day": 5,
+    "status": "Open",
+    "stream": "Coordination",
+    "acceptance": "Live inventory and successful execution evidence for every critical path.",
+    "notes": "",
+    "evidence": "",
+    "reviewer": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "R02",
+    "kind": "risk",
+    "title": "Replay and recovery can change persistent state",
+    "description": "Deduplication, snapshot timing and incremental history require bounded replay and separate data recovery.",
+    "owner": "B. DJEMEL",
+    "priority": "P0",
+    "day": 15,
+    "status": "Open",
+    "stream": "Coordination",
+    "acceptance": "State catalogue and isolated restore/replay demonstrated.",
+    "notes": "",
+    "evidence": "",
+    "reviewer": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "R03",
+    "kind": "risk",
+    "title": "Access may depend on the departing engineer",
+    "description": "Verify personal approvals, integration credentials and machine-identity continuity.",
+    "owner": "A. KHMIRI",
+    "priority": "P0",
+    "day": 15,
+    "status": "Open",
+    "stream": "Coordination",
+    "acceptance": "Successors can operate and all critical credentials have managed owners.",
+    "notes": "",
+    "evidence": "",
+    "reviewer": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "R04",
+    "kind": "risk",
+    "title": "Setup guides are incomplete",
+    "description": "Dataform and pipeline READMEs are generic placeholders.",
+    "owner": "B. DJEMEL",
+    "priority": "P1",
+    "day": 10,
+    "status": "Open",
+    "stream": "Coordination",
+    "acceptance": "Fresh reader can follow team-owned setup, change and recovery guides.",
+    "notes": "",
+    "evidence": "",
+    "reviewer": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "R05",
+    "kind": "risk",
+    "title": "Critical data checks need evidence",
+    "description": "No assertion actions or inline assertions were found in the reviewed SQLX files.",
+    "owner": "B. DJEMEL",
+    "priority": "P1",
+    "day": 15,
+    "status": "Open",
+    "stream": "Coordination",
+    "acceptance": "Critical reconciliation checks run and results are recorded.",
+    "notes": "",
+    "evidence": "",
+    "reviewer": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "R06",
+    "kind": "risk",
+    "title": "Error sampling may leave alerting gaps",
+    "description": "The checked-in Datadog sink samples 1% of ERROR logs. Verify deployed alerts and missing-input detection.",
+    "owner": "A. KHMIRI",
+    "priority": "P1",
+    "day": 13,
+    "status": "Open",
+    "stream": "Coordination",
+    "acceptance": "Critical failure and freshness alerts demonstrated or accountable interim checks accepted.",
+    "notes": "",
+    "evidence": "",
+    "reviewer": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "R07",
+    "kind": "risk",
+    "title": "Private artifact and pipeline dependencies",
+    "description": "Verify access to LVMH modules/image and Azure credential custodians.",
+    "owner": "A. KHMIRI",
+    "priority": "P1",
+    "day": 5,
+    "status": "Open",
+    "stream": "Coordination",
+    "acceptance": "Build/deployment access, support and renewal process verified.",
+    "notes": "",
+    "evidence": "",
+    "reviewer": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "R08",
+    "kind": "risk",
+    "title": "Credentials-named file needs authorized review",
+    "description": "The Dataform credentials-named file is tracked. Contents were not inspected for this plan; do not copy secrets into this workspace.",
+    "owner": "Identity owner",
+    "priority": "P1",
+    "day": 2,
+    "status": "Open",
+    "stream": "Coordination",
+    "acceptance": "Authorized classification; rotate and remove exposure if live secrets are found.",
+    "notes": "",
+    "evidence": "",
+    "reviewer": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "R09",
+    "kind": "risk",
+    "title": "Unfinished INFRA code needs team custody",
+    "description": "INFRA has no local remote and documentation includes planned, unimplemented components.",
+    "owner": "A. KHMIRI",
+    "priority": "P1",
+    "day": 5,
+    "status": "Open",
+    "stream": "Coordination",
+    "acceptance": "Code and actual backlog are in a team-owned location.",
+    "notes": "",
+    "evidence": "",
+    "reviewer": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "R10",
+    "kind": "risk",
+    "title": "Repeated ingestion and export effects",
+    "description": "Snapshot ingestion and repeat delivery need per-interface replay and acknowledgement rules.",
+    "owner": "Both successors",
+    "priority": "P1",
+    "day": 14,
+    "status": "Open",
+    "stream": "Coordination",
+    "acceptance": "Bounded replay, delivery ledger and consumer retry tests recorded.",
+    "notes": "",
+    "evidence": "",
+    "reviewer": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "R11",
+    "kind": "risk",
+    "title": "Campaign attribution rule is provisional",
+    "description": "The attribution window is marked provisional in constants.js.",
+    "owner": "B. DJEMEL",
+    "priority": "P2",
+    "day": 10,
+    "status": "Open",
+    "stream": "Coordination",
+    "acceptance": "Business decision and value recorded, or follow-up accepted.",
+    "notes": "",
+    "evidence": "",
+    "reviewer": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "AC01",
+    "kind": "register",
+    "category": "Access",
+    "title": "Source repositories, branches and review rights",
+    "description": "Verify primary and backup capabilities using their own identities. Record approver, renewal owner and evidence; never include secret values.",
+    "owner": "A. KHMIRI",
+    "day": 2,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Primary capability verified",
+        "done": false
+      },
+      {
+        "label": "Backup capability verified",
+        "done": false
+      },
+      {
+        "label": "Approver and continuity owner recorded",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "AC02",
+    "kind": "register",
+    "category": "Access",
+    "title": "GCP projects, datasets and logs",
+    "description": "Verify primary and backup capabilities using their own identities. Record approver, renewal owner and evidence; never include secret values.",
+    "owner": "A. KHMIRI",
+    "day": 2,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Primary capability verified",
+        "done": false
+      },
+      {
+        "label": "Backup capability verified",
+        "done": false
+      },
+      {
+        "label": "Approver and continuity owner recorded",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "AC03",
+    "kind": "register",
+    "category": "Access",
+    "title": "Terraform backend and deployment identity",
+    "description": "Verify primary and backup capabilities using their own identities. Record approver, renewal owner and evidence; never include secret values.",
+    "owner": "A. KHMIRI",
+    "day": 2,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Primary capability verified",
+        "done": false
+      },
+      {
+        "label": "Backup capability verified",
+        "done": false
+      },
+      {
+        "label": "Approver and continuity owner recorded",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "AC04",
+    "kind": "register",
+    "category": "Access",
+    "title": "Azure pipelines, environments and approvals",
+    "description": "Verify primary and backup capabilities using their own identities. Record approver, renewal owner and evidence; never include secret values.",
+    "owner": "A. KHMIRI",
+    "day": 2,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Primary capability verified",
+        "done": false
+      },
+      {
+        "label": "Backup capability verified",
+        "done": false
+      },
+      {
+        "label": "Approver and continuity owner recorded",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "AC05",
+    "kind": "register",
+    "category": "Access",
+    "title": "Private ATOM modules and loader image",
+    "description": "Verify primary and backup capabilities using their own identities. Record approver, renewal owner and evidence; never include secret values.",
+    "owner": "A. KHMIRI",
+    "day": 2,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Primary capability verified",
+        "done": false
+      },
+      {
+        "label": "Backup capability verified",
+        "done": false
+      },
+      {
+        "label": "Approver and continuity owner recorded",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "AC06",
+    "kind": "register",
+    "category": "Access",
+    "title": "Dataform release and invocation access",
+    "description": "Verify primary and backup capabilities using their own identities. Record approver, renewal owner and evidence; never include secret values.",
+    "owner": "A. KHMIRI",
+    "day": 2,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Primary capability verified",
+        "done": false
+      },
+      {
+        "label": "Backup capability verified",
+        "done": false
+      },
+      {
+        "label": "Approver and continuity owner recorded",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "AC07",
+    "kind": "register",
+    "category": "Access",
+    "title": "Machine-credential custody and renewal",
+    "description": "Verify primary and backup capabilities using their own identities. Record approver, renewal owner and evidence; never include secret values.",
+    "owner": "A. KHMIRI",
+    "day": 2,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Primary capability verified",
+        "done": false
+      },
+      {
+        "label": "Backup capability verified",
+        "done": false
+      },
+      {
+        "label": "Approver and continuity owner recorded",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "AC08",
+    "kind": "register",
+    "category": "Access",
+    "title": "Authorized credentials-file review",
+    "description": "Verify primary and backup capabilities using their own identities. Record approver, renewal owner and evidence; never include secret values.",
+    "owner": "A. KHMIRI",
+    "day": 2,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Primary capability verified",
+        "done": false
+      },
+      {
+        "label": "Backup capability verified",
+        "done": false
+      },
+      {
+        "label": "Approver and continuity owner recorded",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "AC09",
+    "kind": "register",
+    "category": "Access",
+    "title": "Monitoring and incident routing",
+    "description": "Verify primary and backup capabilities using their own identities. Record approver, renewal owner and evidence; never include secret values.",
+    "owner": "A. KHMIRI",
+    "day": 2,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Primary capability verified",
+        "done": false
+      },
+      {
+        "label": "Backup capability verified",
+        "done": false
+      },
+      {
+        "label": "Approver and continuity owner recorded",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "AC10",
+    "kind": "register",
+    "category": "Access",
+    "title": "Export buckets and consumer receipt systems",
+    "description": "Verify primary and backup capabilities using their own identities. Record approver, renewal owner and evidence; never include secret values.",
+    "owner": "A. KHMIRI",
+    "day": 2,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Primary capability verified",
+        "done": false
+      },
+      {
+        "label": "Backup capability verified",
+        "done": false
+      },
+      {
+        "label": "Approver and continuity owner recorded",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "AC11",
+    "kind": "register",
+    "category": "Access",
+    "title": "Recovery artifacts and team knowledge space",
+    "description": "Verify primary and backup capabilities using their own identities. Record approver, renewal owner and evidence; never include secret values.",
+    "owner": "A. KHMIRI",
+    "day": 2,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Primary capability verified",
+        "done": false
+      },
+      {
+        "label": "Backup capability verified",
+        "done": false
+      },
+      {
+        "label": "Approver and continuity owner recorded",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "IN-01",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "ANP (`flow_ana`)",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "A. KHMIRI",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "IN-02",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "Y2",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "A. KHMIRI",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "IN-03",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "AX",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "A. KHMIRI",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "IN-04",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "Klaviyo",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "A. KHMIRI",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "IN-05",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "SFCC",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "A. KHMIRI",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "IN-06",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "External sources, including photobooth and deletion input",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "Both successors",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "IN-07",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "Wasabi",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "A. KHMIRI",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "IN-08",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "Parameters \u2014 push subscription disabled in code",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "A. KHMIRI",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "IN-09",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "Datahub",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "A. KHMIRI",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "IN-10",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "Manual mapping files",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "B. DJEMEL",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "IN-11",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "Veepee",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "A. KHMIRI",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "OUT-01",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "Y2 create / update / merge / delete \u2014 separate subcards",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "B. DJEMEL",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "OUT-02",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "Klaviyo customers / sales \u2014 separate subcards",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "B. DJEMEL",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "OUT-03",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "Datahub sales / returns \u2014 separate subcards",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "B. DJEMEL",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "OUT-04",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "MicroStrategy sales",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "B. DJEMEL",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "OUT-05",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "Veepee catalogue",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "B. DJEMEL",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "OUT-06",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "Wasabi group export",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "B. DJEMEL",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "OUT-07",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "Ad-hoc bulk customers, if actively used",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "B. DJEMEL",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "OUT-08",
+    "kind": "register",
+    "category": "Interfaces",
+    "title": "BI/table/view consumers of dimensions and facts",
+    "description": "Confirm active status and criticality; record producer/consumer contacts, schema and keys, snapshot/delta semantics, schedule/time zone, freshness, runtime identities, retry rules, retention and receipt evidence.",
+    "owner": "B. DJEMEL",
+    "day": 10,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [
+      {
+        "label": "Business owner and active status confirmed",
+        "done": false
+      },
+      {
+        "label": "Contract and schedule recorded",
+        "done": false
+      },
+      {
+        "label": "Bounded retry and consumer acknowledgement verified",
+        "done": false
+      }
+    ],
+    "seeded": true
+  },
+  {
+    "id": "ST01",
+    "kind": "register",
+    "category": "State & recovery",
+    "title": "Datalake incremental actions",
+    "description": "Record grain, keys, append/merge behavior, prior state, fingerprints, watermark, initialization, schema-change steps, recovery location, RTO/RPO and downstream effects.",
+    "owner": "B. DJEMEL",
+    "day": 10,
+    "status": "Unverified",
+    "checks": [
+      {
+        "label": "State and dependencies documented",
+        "done": false
+      },
+      {
+        "label": "Recovery procedure reviewed",
+        "done": false
+      },
+      {
+        "label": "Isolated exercise completed",
+        "done": false
+      }
+    ],
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "ST02",
+    "kind": "register",
+    "category": "State & recovery",
+    "title": "Customer deduplication and master mappings",
+    "description": "Record grain, keys, append/merge behavior, prior state, fingerprints, watermark, initialization, schema-change steps, recovery location, RTO/RPO and downstream effects.",
+    "owner": "B. DJEMEL",
+    "day": 10,
+    "status": "Unverified",
+    "checks": [
+      {
+        "label": "State and dependencies documented",
+        "done": false
+      },
+      {
+        "label": "Recovery procedure reviewed",
+        "done": false
+      },
+      {
+        "label": "Isolated exercise completed",
+        "done": false
+      }
+    ],
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "ST03",
+    "kind": "register",
+    "category": "State & recovery",
+    "title": "Y2 work / incremental / delta state",
+    "description": "Record grain, keys, append/merge behavior, prior state, fingerprints, watermark, initialization, schema-change steps, recovery location, RTO/RPO and downstream effects.",
+    "owner": "B. DJEMEL",
+    "day": 10,
+    "status": "Unverified",
+    "checks": [
+      {
+        "label": "State and dependencies documented",
+        "done": false
+      },
+      {
+        "label": "Recovery procedure reviewed",
+        "done": false
+      },
+      {
+        "label": "Isolated exercise completed",
+        "done": false
+      }
+    ],
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "ST04",
+    "kind": "register",
+    "category": "State & recovery",
+    "title": "Klaviyo, Datahub, MicroStrategy and Veepee deltas",
+    "description": "Record grain, keys, append/merge behavior, prior state, fingerprints, watermark, initialization, schema-change steps, recovery location, RTO/RPO and downstream effects.",
+    "owner": "B. DJEMEL",
+    "day": 10,
+    "status": "Unverified",
+    "checks": [
+      {
+        "label": "State and dependencies documented",
+        "done": false
+      },
+      {
+        "label": "Recovery procedure reviewed",
+        "done": false
+      },
+      {
+        "label": "Isolated exercise completed",
+        "done": false
+      }
+    ],
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "ST05",
+    "kind": "register",
+    "category": "State & recovery",
+    "title": "Customer KPI snapshots and business history",
+    "description": "Record grain, keys, append/merge behavior, prior state, fingerprints, watermark, initialization, schema-change steps, recovery location, RTO/RPO and downstream effects.",
+    "owner": "B. DJEMEL",
+    "day": 10,
+    "status": "Unverified",
+    "checks": [
+      {
+        "label": "State and dependencies documented",
+        "done": false
+      },
+      {
+        "label": "Recovery procedure reviewed",
+        "done": false
+      },
+      {
+        "label": "Isolated exercise completed",
+        "done": false
+      }
+    ],
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "ST06",
+    "kind": "register",
+    "category": "State & recovery",
+    "title": "Customer deletion and replay handling",
+    "description": "Record grain, keys, append/merge behavior, prior state, fingerprints, watermark, initialization, schema-change steps, recovery location, RTO/RPO and downstream effects.",
+    "owner": "B. DJEMEL",
+    "day": 10,
+    "status": "Unverified",
+    "checks": [
+      {
+        "label": "State and dependencies documented",
+        "done": false
+      },
+      {
+        "label": "Recovery procedure reviewed",
+        "done": false
+      },
+      {
+        "label": "Isolated exercise completed",
+        "done": false
+      }
+    ],
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "ST07",
+    "kind": "register",
+    "category": "State & recovery",
+    "title": "Schema, fingerprint and manual mapping changes",
+    "description": "Record grain, keys, append/merge behavior, prior state, fingerprints, watermark, initialization, schema-change steps, recovery location, RTO/RPO and downstream effects.",
+    "owner": "B. DJEMEL",
+    "day": 10,
+    "status": "Unverified",
+    "checks": [
+      {
+        "label": "State and dependencies documented",
+        "done": false
+      },
+      {
+        "label": "Recovery procedure reviewed",
+        "done": false
+      },
+      {
+        "label": "Isolated exercise completed",
+        "done": false
+      }
+    ],
+    "notes": "",
+    "evidence": "",
+    "seeded": true
+  },
+  {
+    "id": "DC01",
+    "kind": "register",
+    "category": "Decisions",
+    "title": "Start date, departure time and capacity",
+    "description": "Record the agreed decision, accountable person, date and supporting evidence.",
+    "owner": "Supervisor",
+    "day": 3,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "DC02",
+    "kind": "register",
+    "category": "Decisions",
+    "title": "Confirmed primary and backup ownership",
+    "description": "Record the agreed decision, accountable person, date and supporting evidence.",
+    "owner": "Supervisor",
+    "day": 3,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "DC03",
+    "kind": "register",
+    "category": "Decisions",
+    "title": "Supervisor, approver and support contacts",
+    "description": "Record the agreed decision, accountable person, date and supporting evidence.",
+    "owner": "Supervisor",
+    "day": 3,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "DC04",
+    "kind": "register",
+    "category": "Decisions",
+    "title": "Critical outputs and business deadlines",
+    "description": "Record the agreed decision, accountable person, date and supporting evidence.",
+    "owner": "Supervisor",
+    "day": 3,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "DC05",
+    "kind": "register",
+    "category": "Decisions",
+    "title": "Recovery time and acceptable data loss",
+    "description": "Record the agreed decision, accountable person, date and supporting evidence.",
+    "owner": "Supervisor",
+    "day": 3,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "DC06",
+    "kind": "register",
+    "category": "Decisions",
+    "title": "INFRA custody and paused backlog",
+    "description": "Record the agreed decision, accountable person, date and supporting evidence.",
+    "owner": "Supervisor",
+    "day": 3,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "DC07",
+    "kind": "register",
+    "category": "Decisions",
+    "title": "Post-departure coverage and review dates",
+    "description": "Record the agreed decision, accountable person, date and supporting evidence.",
+    "owner": "Supervisor",
+    "day": 3,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "SK01",
+    "kind": "skill",
+    "title": "Environment, release and scheduled dependencies",
+    "description": "0: not covered \u00b7 1: explained \u00b7 2: completed with help \u00b7 3: independent from the runbook. Critical primary and backup recovery duties require level 3.",
+    "owner": "Both successors",
+    "day": 18,
+    "status": "Not assessed",
+    "scoreA": 0,
+    "scoreB": 0,
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "SK02",
+    "kind": "skill",
+    "title": "Ingestion diagnosis and bounded replay",
+    "description": "0: not covered \u00b7 1: explained \u00b7 2: completed with help \u00b7 3: independent from the runbook. Critical primary and backup recovery duties require level 3.",
+    "owner": "Both successors",
+    "day": 18,
+    "status": "Not assessed",
+    "scoreA": 0,
+    "scoreB": 0,
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "SK03",
+    "kind": "skill",
+    "title": "Terraform change and recovery",
+    "description": "0: not covered \u00b7 1: explained \u00b7 2: completed with help \u00b7 3: independent from the runbook. Critical primary and backup recovery duties require level 3.",
+    "owner": "Both successors",
+    "day": 18,
+    "status": "Not assessed",
+    "scoreA": 0,
+    "scoreB": 0,
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "SK04",
+    "kind": "skill",
+    "title": "Dataform impact analysis and isolated change",
+    "description": "0: not covered \u00b7 1: explained \u00b7 2: completed with help \u00b7 3: independent from the runbook. Critical primary and backup recovery duties require level 3.",
+    "owner": "Both successors",
+    "day": 18,
+    "status": "Not assessed",
+    "scoreA": 0,
+    "scoreB": 0,
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "SK05",
+    "kind": "skill",
+    "title": "Incremental and snapshot recovery",
+    "description": "0: not covered \u00b7 1: explained \u00b7 2: completed with help \u00b7 3: independent from the runbook. Critical primary and backup recovery duties require level 3.",
+    "owner": "Both successors",
+    "day": 18,
+    "status": "Not assessed",
+    "scoreA": 0,
+    "scoreB": 0,
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "SK06",
+    "kind": "skill",
+    "title": "Deduplication and mapping recovery",
+    "description": "0: not covered \u00b7 1: explained \u00b7 2: completed with help \u00b7 3: independent from the runbook. Critical primary and backup recovery duties require level 3.",
+    "owner": "Both successors",
+    "day": 18,
+    "status": "Not assessed",
+    "scoreA": 0,
+    "scoreB": 0,
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "SK07",
+    "kind": "skill",
+    "title": "Schema, fingerprint and mapping changes",
+    "description": "0: not covered \u00b7 1: explained \u00b7 2: completed with help \u00b7 3: independent from the runbook. Critical primary and backup recovery duties require level 3.",
+    "owner": "Both successors",
+    "day": 18,
+    "status": "Not assessed",
+    "scoreA": 0,
+    "scoreB": 0,
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "SK08",
+    "kind": "skill",
+    "title": "Customer deletion and replay checks",
+    "description": "0: not covered \u00b7 1: explained \u00b7 2: completed with help \u00b7 3: independent from the runbook. Critical primary and backup recovery duties require level 3.",
+    "owner": "Both successors",
+    "day": 18,
+    "status": "Not assessed",
+    "scoreA": 0,
+    "scoreB": 0,
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "SK09",
+    "kind": "skill",
+    "title": "Partial export and consumer reconciliation",
+    "description": "0: not covered \u00b7 1: explained \u00b7 2: completed with help \u00b7 3: independent from the runbook. Critical primary and backup recovery duties require level 3.",
+    "owner": "Both successors",
+    "day": 18,
+    "status": "Not assessed",
+    "scoreA": 0,
+    "scoreB": 0,
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "SK10",
+    "kind": "skill",
+    "title": "Alert triage and escalation",
+    "description": "0: not covered \u00b7 1: explained \u00b7 2: completed with help \u00b7 3: independent from the runbook. Critical primary and backup recovery duties require level 3.",
+    "owner": "Both successors",
+    "day": 18,
+    "status": "Not assessed",
+    "scoreA": 0,
+    "scoreB": 0,
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "SK11",
+    "kind": "skill",
+    "title": "Independent operations and backup incident",
+    "description": "0: not covered \u00b7 1: explained \u00b7 2: completed with help \u00b7 3: independent from the runbook. Critical primary and backup recovery duties require level 3.",
+    "owner": "Both successors",
+    "day": 18,
+    "status": "Not assessed",
+    "scoreA": 0,
+    "scoreB": 0,
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "SK12",
+    "kind": "skill",
+    "title": "INFRA decisions and unfinished work",
+    "description": "0: not covered \u00b7 1: explained \u00b7 2: completed with help \u00b7 3: independent from the runbook. Critical primary and backup recovery duties require level 3.",
+    "owner": "Both successors",
+    "day": 18,
+    "status": "Not assessed",
+    "scoreA": 0,
+    "scoreB": 0,
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "FA01",
+    "kind": "register",
+    "category": "Final acceptance",
+    "title": "Primary and backup named for every critical responsibility; support hours and escalation contacts verified.",
+    "description": "Record who verified this criterion, when, and the evidence. This criterion is required for final ownership acceptance.",
+    "owner": "Supervisor",
+    "day": 20,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "FA02",
+    "kind": "register",
+    "category": "Final acceptance",
+    "title": "Both successors use individual access; no critical process requires the departing engineer's laptop or personal login.",
+    "description": "Record who verified this criterion, when, and the evidence. This criterion is required for final ownership acceptance.",
+    "owner": "Supervisor",
+    "day": 20,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "FA03",
+    "kind": "register",
+    "category": "Final acceptance",
+    "title": "All active critical sources, transformations, schedules and consumers inventoried against live configuration.",
+    "description": "Record who verified this criterion, when, and the evidence. This criterion is required for final ownership acceptance.",
+    "owner": "Supervisor",
+    "day": 20,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "FA04",
+    "kind": "register",
+    "category": "Final acceptance",
+    "title": "Successors independently complete a reviewed infrastructure change and a Dataform change in the agreed safe environment, with validation and recovery evidence.",
+    "description": "Record who verified this criterion, when, and the evidence. This criterion is required for final ownership acceptance.",
+    "owner": "Supervisor",
+    "day": 20,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "FA05",
+    "kind": "register",
+    "category": "Final acceptance",
+    "title": "Deduplication, incremental replay, manual schema changes, synthetic customer deletion and export retry exercises completed.",
+    "description": "Record who verified this criterion, when, and the evidence. This criterion is required for final ownership acceptance.",
+    "owner": "Supervisor",
+    "day": 20,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "FA06",
+    "kind": "register",
+    "category": "Final acceptance",
+    "title": "Backup leads at least one incident and one meaningful recovery activity using the runbooks.",
+    "description": "Record who verified this criterion, when, and the evidence. This criterion is required for final ownership acceptance.",
+    "owner": "Supervisor",
+    "day": 20,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "FA07",
+    "kind": "register",
+    "category": "Final acceptance",
+    "title": "Critical outputs reconcile: no unexplained missing/duplicate business keys; agreed totals, master mappings, deletion/consent outcomes and consumer receipts pass. Any numerical tolerance is documented and approved in advance.",
+    "description": "Record who verified this criterion, when, and the evidence. This criterion is required for final ownership acceptance.",
+    "owner": "Supervisor",
+    "day": 20,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "FA08",
+    "kind": "register",
+    "category": "Final acceptance",
+    "title": "Three consecutive independent operating days/critical daily cycles completed; less-frequent jobs covered by rehearsal.",
+    "description": "Record who verified this criterion, when, and the evidence. This criterion is required for final ownership acceptance.",
+    "owner": "Supervisor",
+    "day": 20,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "FA09",
+    "kind": "register",
+    "category": "Final acceptance",
+    "title": "Alert delivery and missing-input detection verified; recovery/access evidence is stored without secret values or unnecessary customer data.",
+    "description": "Record who verified this criterion, when, and the evidence. This criterion is required for final ownership acceptance.",
+    "owner": "Supervisor",
+    "day": 20,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "FA10",
+    "kind": "register",
+    "category": "Final acceptance",
+    "title": "Documentation, source, recording links and INFRA backlog are in team-owned locations and readable by successors.",
+    "description": "Record who verified this criterion, when, and the evidence. This criterion is required for final ownership acceptance.",
+    "owner": "Supervisor",
+    "day": 20,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "FA11",
+    "kind": "register",
+    "category": "Final acceptance",
+    "title": "No open P0; P1 residuals have explicit acceptance, workaround, support owner and resolution date.",
+    "description": "Record who verified this criterion, when, and the evidence. This criterion is required for final ownership acceptance.",
+    "owner": "Supervisor",
+    "day": 20,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  },
+  {
+    "id": "FA12",
+    "kind": "register",
+    "category": "Final acceptance",
+    "title": "Identity administrator has an exact departure-time revocation plan, tested machine-identity continuity and an owner for each integration credential.",
+    "description": "Record who verified this criterion, when, and the evidence. This criterion is required for final ownership acceptance.",
+    "owner": "Supervisor",
+    "day": 20,
+    "status": "Unverified",
+    "notes": "",
+    "evidence": "",
+    "checks": [],
+    "seeded": true
+  }
+]
